@@ -45,7 +45,7 @@ module storageAccountRoleAssignments 'br/modules:roleassignments:2023-06-09' = {
   scope: newRG
   params: {
     roleDefinitionIds: ['ba92f5b4-2d11-453d-a403-e96b0029c9fe'] // Storage Blob Data Contributor
-    principalId: 'f060772d-fa8e-4055-9181-bdc18dc90a9a' // Development (f060772d-fa8e-4055-9181-bdc18dc90a9a) Service pricipal needs access to storage 
+    principalId: '231bf7bd-9857-477b-acc2-c094a83c54f0' // Development (f060772d-fa8e-4055-9181-bdc18dc90a9a) Service pricipal needs access to storage 
     principalType: 'ServicePrincipal'
   }
 }

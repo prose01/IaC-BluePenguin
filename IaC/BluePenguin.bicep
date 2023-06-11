@@ -38,3 +38,14 @@ module storageAccount 'br/modules:storageaccount:2023-06-09' = {
     tags: tags
   }
 }
+
+// module add Storage Blob Data Contributor for pipeline
+module storageAccountRoleAssignments 'br/modules:roleassignments:2023-06-09' = {
+  name: 'storageAccountRoleAssignments'
+  scope: newRG
+  params: {
+    roleDefinitionIds: ['ba92f5b4-2d11-453d-a403-e96b0029c9fe'] // Storage Blob Data Contributor
+    principalId: 'f060772d-fa8e-4055-9181-bdc18dc90a9a' // Development (f060772d-fa8e-4055-9181-bdc18dc90a9a) Service pricipal needs access to storage 
+    principalType: 'ServicePrincipal'
+  }
+}
